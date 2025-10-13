@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny Jamil - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple styles for resume content */
+        .resume-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #111827; /* gray-900 */
+            border-bottom: 2px solid #e5e7eb; /* gray-200 */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .job-entry, .education-entry, .certification-entry {
+            margin-bottom: 2rem;
+            padding-left: 3.5rem; /* Space for the logo */
+            position: relative;
+        }
+        .job-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+        .logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2.5rem; /* w-10 */
+            height: 2.5rem; /* h-10 */
+            object-fit: contain;
+            border-radius: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation (Copied from index.html) -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Site Name -->
+                <div class="flex-shrink-0">
+                    <a href="./index.html" class="text-2xl font-bold text-gray-900">Sunny Jamil</a>
+                </div>
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="./resume.html" class="text-indigo-600 font-semibold transition-colors">Resume</a>
+                    <a href="./projects.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Projects</a>
+                    <a href="./wishlist.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Wishlist</a>
+                    <a href="./contact.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Scheduling</a>
+                    <a href="./payments.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Payments</a>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content for Resume Page -->
+    <main>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            
+            <!-- Page Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-900">Resume & Professional Bio</h1>
+                <p class="mt-4 text-lg text-gray-600">A summary of my skills, experience, and education.</p>
+                <!-- Download Button
+                <a href="./Profile.pdf" download class="mt-6 inline-block bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">
+                    Download PDF Version
+                </a> -->
+            </div>
+
+            <!-- About Me Section -->
+            <div class="resume-section mb-12">
+                <h2>About Me</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    With a passion for producing effective business solutions, Sunny specializes in medical technology and server infrastructure. His expertise spans <strong>system engineering</strong> and <strong>system architecture</strong>, allowing him to design, implement, and support robust, scalable software solutions. As a team lead, he has honed strong <strong>managerial skills</strong>, guiding product teams to success in complex healthcare environments. In his free time, he researches emerging tech, tackles logical challenges, and dabbles in linguistics. Since 2008, he has also provided technical consulting services to private clients.
+                </p>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="resume-section mb-12">
+                <h2>Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Technical</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>System Administration & Engineering</li>
+                            <li>System Architecture</li>
+                            <li>Project Management</li>
+                            <li>Critical Thinking</li>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Git & GitHub</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Languages</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li><strong>English:</strong> Native or Bilingual</li>
+                            <li><strong>Urdu:</strong> Native or Bilingual</li>
+                            <li><strong>Hindi:</strong> Professional Working</li>
+                            <li><strong>Spanish:</strong> Professional Working</li>
+                            <li><strong>Arabic:</strong> Elementary</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="resume-section mb-12">
+                <h2>Certifications</h2>
+                <div class="certification-entry">
+                    <img src="https://logo.clearbit.com/epic.com" alt="Epic Systems Logo" class="logo bg-white p-1">
+                    <p class="job-title">Health Information Management - Hospital Coding</p>
+                    <p class="text-gray-700">Epic Systems</p>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="resume-section mb-12">
+                <h2>Experience</h2>
+                <div class="job-entry">
+                    <img src="https://logo.clearbit.com/montefiore.org" alt="Montefiore Health System Logo" class="logo bg-white p-1">
+                    <p class="job-title">Team Lead</p>
+                    <p class="text-gray-700">Montefiore Health System | White Plains, New York</p>
+                    <p class="text-sm text-gray-500 mb-3">November 2022 - Present</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Lead a product team overseeing various healthcare software for revenue cycle operations, interfacing with the Epic EMR.</li>
+                        <li>Manage a suite of software including 3M 360 Encompass, 3M Core Grouping Software, PwC SMART, SmarterDx, and eCHARMS.</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                     <img src="https://logo.clearbit.com/montefiore.org" alt="Montefiore Health System Logo" class="logo bg-white p-1">
+                    <p class="job-title">IT Systems Administrator</p>
+                    <p class="text-gray-700">Montefiore Health System | Greater New York City Area</p>
+                    <p class="text-sm text-gray-500 mb-3">September 2018 - November 2022</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Engineered, implemented, and supported software solutions for opioid treatment programs (OTP).</li>
+                        <li>Focused on OTP EMR (SMART), primary care EMR (Epic), and revenue cycle systems.</li>
+                        <li>Managed interfaces between systems and performed Windows and Red Hat Enterprise Linux server maintenance.</li>
+                    </ul>
+                </div>
+                 <div class="job-entry">
+                    <img src="https://logo.clearbit.com/coherecomm.com" alt="Cohere Communications Logo" class="logo bg-white p-1">
+                    <p class="job-title">Network Operations Center Engineer</p>
+                    <p class="text-gray-700">Cohere Communications | Tarrytown, NY</p>
+                    <p class="text-sm text-gray-500 mb-3">October 2017 - September 2018</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Provided data center maintenance at a Managed IT service provider.</li>
+                        <li>Managed Windows Servers, Hyper-V and VMware virtualization, Voice Over IP, and Windows/macOS workstations.</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                    <img src="https://logo.clearbit.com/ntent.com" alt="NTENT Logo" class="logo bg-white p-1">
+                    <p class="job-title">IT Support Technician</p>
+                    <p class="text-gray-700">NTENT | New York</p>
+                    <p class="text-sm text-gray-500 mb-3">June 2015 - October 2017</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Resolved challenging IT issues and delivered productivity solutions for a linguistic research firm.</li>
+                        <li>Administered Office 365, VoIP technologies, custom asset tracking systems, and workstations for global employees.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="resume-section">
+                <h2>Education</h2>
+                <div class="education-entry">
+                    <img src="https://logo.clearbit.com/pace.edu" alt="Pace University Logo" class="logo bg-white p-1">
+                    <p class="job-title">Master of Business Administration (MBA), Management Information Systems</p>
+                    <p class="text-gray-700">Pace University - Lubin School of Business</p>
+                    <p class="text-sm text-gray-500">2021</p>
+                </div>
+                <div class="education-entry">
+                    <img src="https://logo.clearbit.com/pace.edu" alt="Pace University Logo" class="logo bg-white p-1">
+                    <p class="job-title">Bachelor of Business Administration (BBA), Information Systems</p>
+                    <p class="text-gray-700">Pace University - Lubin School of Business</p>
+                </div>
+                <div class="education-entry">
+                    <img src="https://resources.finalsite.net/images/v1657763885/whiteplainspublicschoolsorg/f1ed8iqdurkgvrvoyugc/logo.svg" alt="White Plains Public Schools Logo" class="logo bg-white p-1">
+                    <p class="job-title">Advanced Regents Diploma</p>
+                    <p class="text-gray-700">White Plains Senior High School</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer (Copied from index.html) -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500">
+            <p>&copy; 2025 Sunny Jamil. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
