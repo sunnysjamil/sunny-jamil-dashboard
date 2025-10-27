@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny Jamil - Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Site Name -->
+                <div class="flex-shrink-0">
+                    <a href="./index.html" class="text-2xl font-bold text-gray-900">Sunny Jamil</a>
+                </div>
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="./resume.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Resume</a>
+                    <a href="./projects.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Projects</a>
+                    <a href="./wishlist.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Wishlist</a>
+                    <a href="./contact.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Scheduling</a>
+                    <a href="./payments.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Payments</a>
+                    <a href="./shop.html" class="text-indigo-600 font-semibold transition-colors">Shop</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content for Shop Page -->
+    <main>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            
+            <!-- Page Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-900">Shop</h1>
+                <p class="mt-4 text-lg text-gray-600">Browse available items below. Submit an inquiry to order.</p>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+
+                <!-- Product Card: Placeholder -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">The Wudhu Socks - Black</h3>
+                        <p class="text-gray-700 mb-4">
+                            One set of The Wudhu Socks (Black).
+                        </p>
+                        <p class="text-lg font-semibold text-indigo-600 mb-4"><s>$27.99</s> $21</p>
+                        <button onclick="selectItem('The Wudhu Socks - Black')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">
+                            Inquire to Order
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product Card: Placeholder -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">The Wudhu Socks - Stone Gray</h3>
+                        <p class="text-gray-700 mb-4">
+                            One set of The Wudhu Socks (Stone Gray).
+                        </p>
+                        <p class="text-lg font-semibold text-indigo-600 mb-4"><s>$27.99</s> $21</p>
+                        <button onclick="selectItem('The Wudhu Socks - Stone Gray')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">
+                            Inquire to Order
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product Card: Placeholder -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">The Wudhu Socks - Navy Blue</h3>
+                        <p class="text-gray-700 mb-4">
+                            One set of The Wudhu Socks (Navy Blue).
+                        </p>
+                        <p class="text-lg font-semibold text-indigo-600 mb-4"><s>$27.99</s> $21</p>
+                        <button onclick="selectItem('The Wudhu Socks - Navy Blue')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">
+                            Inquire to Order
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product Card: Placeholder -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">The Wudhu Socks - Brown</h3>
+                        <p class="text-gray-700 mb-4">
+                            One set of The Wudhu Socks (Brown).
+                        </p>
+                        <p class="text-lg font-semibold text-indigo-600 mb-4"><s>$27.99</s> $21</p>
+                        <button onclick="selectItem('The Wudhu Socks - Brown')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">
+                            Inquire to Order
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product Card: Placeholder -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">The Wudhu Socks - Ivory</h3>
+                        <p class="text-gray-700 mb-4">
+                            One set of The Wudhu Socks (Brown).
+                        </p>
+                        <p class="text-lg font-semibold text-indigo-600 mb-4"><s>$27.99</s> $21</p>
+                        <button onclick="selectItem('The Wudhu Socks - Brown')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">
+                            Inquire to Order
+                        </button>
+                    </div>
+                </div>
+
+                 <!-- Product Card: Placeholder
+                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                         <img src="https://placehold.co/400x300/e2e8f0/cbd5e0?text=Item+Image" alt="Placeholder Item Image" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sample Item 2</h3>
+                        <p class="text-gray-700 mb-4">
+                            Description of the second item. Highlight what makes it unique or desirable.
+                        </p>
+                         <p class="text-lg font-semibold text-indigo-600 mb-4">$29.99</p>
+                         <button onclick="selectItem('Sample Item 2')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">
+                            Inquire to Order
+                        </button>
+                    </div>
+                </div>
+
+                Add more product cards as needed -->
+
+            </div>
+
+            <!-- Order Inquiry Form -->
+            <div id="order-form-section" class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-6 text-center">Order Inquiry</h2>
+                <form action="https://formspree.io/f/xeopegpo" method="POST">
+                    <div class="mb-4">
+                        <label for="item" class="block text-sm font-medium text-gray-700 mb-1">Item Interested In:</label>
+                        <input type="text" name="item" id="item" required class="py-2 px-3 block w-full shadow-sm border-gray-300 rounded-md bg-gray-100" readonly>
+                    </div>
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name:</label>
+                        <input type="text" name="name" id="name" required class="py-2 px-3 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email:</label>
+                        <input type="email" name="email" id="email" required class="py-2 px-3 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message (Optional):</label>
+                        <textarea name="message" id="message" rows="3" class="py-2 px-3 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all">
+                            Submit Inquiry
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500">
+            <p>&copy; 2025 Sunny Jamil. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to pre-fill the item name when a button is clicked
+        function selectItem(itemName) {
+            const itemInput = document.getElementById('item');
+            itemInput.value = itemName;
+            // Scroll to the form section
+            document.getElementById('order-form-section').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
