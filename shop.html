@@ -12,6 +12,11 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -33,6 +38,12 @@
                     <a href="./payments.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Payments</a>
                     <a href="./shop.html" class="text-indigo-600 font-semibold transition-colors">Shop</a>
                 </nav>
+                <!-- Mobile Menu Button (functionality not yet added) -->
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -40,119 +51,104 @@
     <!-- Main Content for Shop Page -->
     <main>
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            
+
             <!-- Page Header -->
             <div class="text-center mb-12">
                 <h1 class="text-4xl font-bold text-gray-900">Shop</h1>
                 <p class="mt-4 text-lg text-gray-600">Browse available items below. Submit an inquiry to order.</p>
             </div>
 
-            <!-- Products Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <!-- Accordion Container -->
+            <div class="space-y-4 mb-16">
 
-                <!-- Product Card: Placeholder -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="bg-gray-200 h-48 flex items-center justify-center">
-                        <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">The Wudhu Socks - Black</h3>
-                        <p class="text-gray-700 mb-4">
-                            One set of The Wudhu Socks (Black).
-                        </p>
-                        <p class="text-lg font-semibold text-indigo-600 mb-4"><s>$27.99</s> $21</p>
-                        <button onclick="selectItem('The Wudhu Socks - Black')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">
-                            Inquire to Order
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Product Card: Placeholder -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="bg-gray-200 h-48 flex items-center justify-center">
-                        <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">The Wudhu Socks - Stone Gray</h3>
-                        <p class="text-gray-700 mb-4">
-                            One set of The Wudhu Socks (Stone Gray).
-                        </p>
-                        <p class="text-lg font-semibold text-indigo-600 mb-4"><s>$27.99</s> $21</p>
-                        <button onclick="selectItem('The Wudhu Socks - Stone Gray')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">
-                            Inquire to Order
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Product Card: Placeholder -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="bg-gray-200 h-48 flex items-center justify-center">
-                        <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">The Wudhu Socks - Navy Blue</h3>
-                        <p class="text-gray-700 mb-4">
-                            One set of The Wudhu Socks (Navy Blue).
-                        </p>
-                        <p class="text-lg font-semibold text-indigo-600 mb-4"><s>$27.99</s> $21</p>
-                        <button onclick="selectItem('The Wudhu Socks - Navy Blue')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">
-                            Inquire to Order
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Product Card: Placeholder -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="bg-gray-200 h-48 flex items-center justify-center">
-                        <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">The Wudhu Socks - Brown</h3>
-                        <p class="text-gray-700 mb-4">
-                            One set of The Wudhu Socks (Brown).
-                        </p>
-                        <p class="text-lg font-semibold text-indigo-600 mb-4"><s>$27.99</s> $21</p>
-                        <button onclick="selectItem('The Wudhu Socks - Brown')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">
-                            Inquire to Order
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Product Card: Placeholder -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="bg-gray-200 h-48 flex items-center justify-center">
-                        <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">The Wudhu Socks - Ivory</h3>
-                        <p class="text-gray-700 mb-4">
-                            One set of The Wudhu Socks (Brown).
-                        </p>
-                        <p class="text-lg font-semibold text-indigo-600 mb-4"><s>$27.99</s> $21</p>
-                        <button onclick="selectItem('The Wudhu Socks - Brown')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">
-                            Inquire to Order
-                        </button>
+                <!-- Accordion Item 1: Wudhu Socks -->
+                <div>
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-lg text-gray-800 bg-white rounded-lg shadow-md hover:bg-gray-100 focus:outline-none transition-colors">
+                        <span>The Wudhu Socks - Socks to Wipe Over For Ablution</span>
+                        <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content bg-white rounded-b-lg shadow-md">
+                        <div class="p-6 border-t border-gray-200">
+                            <!-- Products Grid for Socks -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <!-- Black Socks -->
+                                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                     <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-48 object-cover">
+                                    <div class="p-4">
+                                        <h3 class="text-lg font-bold text-gray-900 mb-1">Wudhu Socks - Black</h3>
+                                        <p class="text-gray-700 mb-2 text-sm">One pair of The Wudhu Socks (Black).</p>
+                                        <p class="text-md font-semibold text-indigo-600 mb-3"><s>$27.99</s> $21</p>
+                                        <button onclick="selectItem('The Wudhu Socks - Black')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-sm hover:bg-indigo-700 transition-all text-sm">
+                                            Inquire to Order
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Stone Gray Socks -->
+                                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                    <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-48 object-cover">
+                                    <div class="p-4">
+                                        <h3 class="text-lg font-bold text-gray-900 mb-1">Wudhu Socks - Stone Gray</h3>
+                                        <p class="text-gray-700 mb-2 text-sm">One pair of The Wudhu Socks (Stone Gray).</p>
+                                        <p class="text-md font-semibold text-indigo-600 mb-3"><s>$27.99</s> $21</p>
+                                        <button onclick="selectItem('The Wudhu Socks - Stone Gray')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-sm hover:bg-indigo-700 transition-all text-sm">
+                                            Inquire to Order
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Navy Blue Socks -->
+                                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                     <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-48 object-cover">
+                                    <div class="p-4">
+                                        <h3 class="text-lg font-bold text-gray-900 mb-1">Wudhu Socks - Navy Blue</h3>
+                                        <p class="text-gray-700 mb-2 text-sm">One pair of The Wudhu Socks (Navy Blue).</p>
+                                        <p class="text-md font-semibold text-indigo-600 mb-3"><s>$27.99</s> $21</p>
+                                        <button onclick="selectItem('The Wudhu Socks - Navy Blue')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-sm hover:bg-indigo-700 transition-all text-sm">
+                                            Inquire to Order
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Brown Socks -->
+                                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                     <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-48 object-cover">
+                                    <div class="p-4">
+                                        <h3 class="text-lg font-bold text-gray-900 mb-1">Wudhu Socks - Brown</h3>
+                                        <p class="text-gray-700 mb-2 text-sm">One pair of The Wudhu Socks (Brown).</p>
+                                        <p class="text-md font-semibold text-indigo-600 mb-3"><s>$27.99</s> $21</p>
+                                        <button onclick="selectItem('The Wudhu Socks - Brown')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-sm hover:bg-indigo-700 transition-all text-sm">
+                                            Inquire to Order
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Ivory Socks -->
+                                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                    <img src="./images/the-wudhu-socks-5-pack.png" alt="The Wudhu Socks (Set of Five)" class="w-full h-48 object-cover">
+                                   <div class="p-4">
+                                       <h3 class="text-lg font-bold text-gray-900 mb-1">Wudhu Socks - Ivory</h3>
+                                       <p class="text-gray-700 mb-2 text-sm">One pair of The Wudhu Socks (Ivory).</p>
+                                       <p class="text-md font-semibold text-indigo-600 mb-3"><s>$27.99</s> $21</p>
+                                       <button onclick="selectItem('The Wudhu Socks - Ivory')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-sm hover:bg-indigo-700 transition-all text-sm">
+                                           Inquire to Order
+                                       </button>
+                                   </div>
+                               </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                 <!-- Product Card: Placeholder
-                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="bg-gray-200 h-48 flex items-center justify-center">
-                         <img src="https://placehold.co/400x300/e2e8f0/cbd5e0?text=Item+Image" alt="Placeholder Item Image" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sample Item 2</h3>
-                        <p class="text-gray-700 mb-4">
-                            Description of the second item. Highlight what makes it unique or desirable.
-                        </p>
-                         <p class="text-lg font-semibold text-indigo-600 mb-4">$29.99</p>
-                         <button onclick="selectItem('Sample Item 2')" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">
-                            Inquire to Order
-                        </button>
+                <!-- Accordion Item 2: Other Items -->
+                <div>
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-lg text-gray-800 bg-white rounded-lg shadow-md hover:bg-gray-100 focus:outline-none transition-colors">
+                        <span>Other Items</span>
+                        <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content bg-white rounded-b-lg shadow-md">
+                        <div class="p-6 border-t border-gray-200">
+                           <p class="text-gray-600">More items coming soon!</p>
+                           <!-- Add product cards here later -->
+                        </div>
                     </div>
                 </div>
-
-                Add more product cards as needed -->
 
             </div>
 
@@ -172,6 +168,30 @@
                         <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email:</label>
                         <input type="email" name="email" id="email" required class="py-2 px-3 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
                     </div>
+                    <!-- Address Fields Start -->
+                    <div class="mb-4 sm:col-span-2">
+                        <label for="address-line1" class="block text-sm font-medium text-gray-700 mb-1">Street Address:</label>
+                        <input type="text" name="address-line1" id="address-line1" required autocomplete="street-address" class="py-2 px-3 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                    </div>
+                     <div class="mb-4 sm:col-span-2">
+                        <label for="address-line2" class="block text-sm font-medium text-gray-700 mb-1">Apartment, suite, etc. (Optional):</label>
+                        <input type="text" name="address-line2" id="address-line2" autocomplete="address-line2" class="py-2 px-3 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                        <div>
+                            <label for="city" class="block text-sm font-medium text-gray-700 mb-1">City:</label>
+                            <input type="text" name="city" id="city" required autocomplete="address-level2" class="py-2 px-3 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                        </div>
+                        <div>
+                            <label for="state" class="block text-sm font-medium text-gray-700 mb-1">State:</label>
+                            <input type="text" name="state" id="state" required autocomplete="address-level1" class="py-2 px-3 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                        </div>
+                        <div>
+                            <label for="zip" class="block text-sm font-medium text-gray-700 mb-1">ZIP / Postal Code:</label>
+                            <input type="text" name="zip" id="zip" required autocomplete="postal-code" class="py-2 px-3 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                        </div>
+                    </div>
+                     <!-- Address Fields End -->
                     <div class="mb-6">
                         <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message (Optional):</label>
                         <textarea name="message" id="message" rows="3" class="py-2 px-3 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
@@ -195,14 +215,43 @@
     </footer>
 
     <script>
+        // Accordion functionality
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('svg');
+
+                // Toggle current accordion
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null; // Close it
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    // Close others before opening this one
+                    accordionHeaders.forEach(otherHeader => {
+                        if (otherHeader !== header) {
+                            otherHeader.nextElementSibling.style.maxHeight = null;
+                            otherHeader.querySelector('svg').style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    // Open it
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.style.transform = 'rotate(180deg)';
+                } 
+            });
+        });
+
         // Simple script to pre-fill the item name when a button is clicked
         function selectItem(itemName) {
             const itemInput = document.getElementById('item');
             itemInput.value = itemName;
-            // Scroll to the form section
+            // Scroll to the form section smoothly
             document.getElementById('order-form-section').scrollIntoView({ behavior: 'smooth' });
+            itemInput.focus(); // Optionally focus the item field
         }
     </script>
 
 </body>
 </html>
+
