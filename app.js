@@ -38,16 +38,18 @@ document.addEventListener("DOMContentLoaded", function() {
      * Highlights the active navigation link based on the current page URL.
      */
     const highlightActiveNav = () => {
-        // Adjust for the base path on GitHub Pages
-        const currentPage = window.location.pathname.replace(basePath, '').split('/').pop() || 'index.html';
-        // Handle the case where the path is the root (e.g., "index.html" or just "/")
-        const activePage = currentPage === '' ? 'index.html' : currentPage;
+        // Get the filename of the current page (e.g., "resume.html" or "index.html")
+        const currentPageFile = window.location.pathname.split('/').pop() || 'index.html';
         
         const navLinks = document.querySelectorAll('#nav-placeholder nav a');
         
         navLinks.forEach(link => {
-            const linkPage = link.getAttribute('href').split('/').pop();
-            if (linkPage === activePage || (linkPage === '' && activePage === 'index.html')) {
+            // Get the filename from the link's href (e.g., from "./resume.html" get "resume.html")
+            const linkFile = link.getAttribute('href').split('/').pop();
+
+            // If the link's file matches the current page's file, highlight it.
+            // The check for 'index.html' handles the case where the link is just "./"
+            if (linkFile === currentPageFile || (linkFile === '' && currentPageFile === 'index.html')) {
                 link.classList.remove('text-gray-600', 'hover:text-indigo-600');
                 link.classList.add('text-indigo-600', 'font-semibold');
             }
