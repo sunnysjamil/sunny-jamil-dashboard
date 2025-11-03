@@ -29,17 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     };
     
-    // Determine the base path. For GitHub Pages, it's "/<repository-name>". For local, it's "".
-    const isGitHubPages = window.location.hostname.includes('github.io');
-    const repoName = 'sunny.salmanjamil.me'; // Your repository name
-    const basePath = isGitHubPages ? `/${repoName}` : '';
-
     /**
      * Highlights the active navigation link based on the current page URL.
      */
     const highlightActiveNav = () => {
-        // Get the filename of the current page (e.g., "resume.html" or "index.html")
-        const currentPageFile = window.location.pathname.split('/').pop() || 'index.html';
+        const currentPath = window.location.pathname;
         
         const navLinks = document.querySelectorAll('#nav-placeholder nav a');
         
@@ -47,18 +41,17 @@ document.addEventListener("DOMContentLoaded", function() {
             // Get the filename from the link's href (e.g., from "./resume.html" get "resume.html")
             const linkFile = link.getAttribute('href').split('/').pop();
 
-            // If the link's file matches the current page's file, highlight it.
-            // The check for 'index.html' handles the case where the link is just "./"
-            if (linkFile === currentPageFile || (linkFile === '' && currentPageFile === 'index.html')) {
+            // Compare the link's full path to the current page's path
+            if (link.pathname === currentPath) {
                 link.classList.remove('text-gray-600', 'hover:text-indigo-600');
                 link.classList.add('text-indigo-600', 'font-semibold');
             }
         });
     };
     
-    // Load navigation and then call the function to highlight the active link.
-    loadComponent(`${basePath}_nav.html`, "nav-placeholder", highlightActiveNav);
+    // Always fetch from the root of the domain. This works for both local and the custom domain.
+    loadComponent('/_nav.html', "nav-placeholder", highlightActiveNav);
     
     // Load the footer.
-    loadComponent(`${basePath}_footer.html`, "footer-placeholder");
+    loadComponent('/_footer.html', "footer-placeholder");
 });
