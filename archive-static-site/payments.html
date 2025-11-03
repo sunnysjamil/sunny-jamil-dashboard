@@ -16,7 +16,32 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <div id="nav-placeholder"></div>
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Site Name -->
+                <div class="flex-shrink-0">
+                    <a href="./index.html" class="text-2xl font-bold text-gray-900">Sunny Jamil</a>
+                </div>
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="./resume.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Resume</a>
+                    <a href="./projects.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Projects</a>
+                    <a href="./wishlist.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Wishlist</a>
+                    <a href="./contact.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Scheduling</a>
+                    <a href="./payments.html" class="text-indigo-600 font-semibold transition-colors">Payments</a>
+                    <a href="./shop.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Shop</a>
+                </nav>
+                <!-- Mobile Menu Button (functionality not yet added) -->
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Main Content for Payments Page -->
     <main>
@@ -60,9 +85,12 @@
         </div>
     </main>
 
-    <div id="footer-placeholder"></div>
-    
-    <script src="app.js"></script>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500">
+            <p>&copy; 2025 Sunny Jamil. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

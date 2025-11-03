@@ -16,7 +16,33 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <div id="nav-placeholder"></div>
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Site Name -->
+                <div class="flex-shrink-0">
+                    <a href="./index.html" class="text-2xl font-bold text-gray-900">Sunny Jamil</a>
+                </div>
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="./resume.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Resume</a>
+                    <a href="./projects.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Projects</a>
+                    <a href="./wishlist.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Wishlist</a>
+                    <a href="./contact.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Scheduling</a>
+                    <a href="./payments.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Payments</a>
+                    <a href="./shop.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Shop</a>
+                </nav>
+                <!-- Mobile Menu Button (functionality not yet added) -->
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                        <!-- Heroicon: menu -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Main Hero Section -->
     <main class="bg-white">
@@ -76,7 +102,7 @@
                         <div class="flex items-center justify-center w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full mb-5">
                             <!-- Heroicon: globe-alt -->
                             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c.506 0 1.023.042 1.531.127M12 21c-.506 0-1.023.042-1.531.127M12 3a9.004 9.004 0 00-8.716 6.747M12 3a9.004 9.004 0 018.716 6.747M12 3c.506 0 1.023-.042 1.531.127M12 3c-.506 0-1.023-.042-1.531.127m0 0A48.11 48.11 0 0112 5.25c.618 0 1.221.043 1.808.128m-3.616 0A48.11 48.11 0 0012 5.25c-.618 0-1.221.043-1.808.128m3.616 0A48.11 48.11 0 0112 5.25c.618 0 1.221.043 1.808.128M18 9.75l-6 6-6-6" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c.506 0 1.023.042 1.531.127M12 21c-.506 0-1.023.042-1.531.127M12 3a9.004 9.004 0 00-8.716 6.747M12 3a9.004 9.004 0 018.716 6.747M12 3c.506 0 1.023-.042 1.531-.127M12 3c-.506 0-1.023-.042-1.531.127m0 0A48.11 48.11 0 0112 5.25c.618 0 1.221.043 1.808.128m-3.616 0A48.11 48.11 0 0012 5.25c-.618 0-1.221.043-1.808.128m3.616 0A48.11 48.11 0 0112 5.25c.618 0 1.221.043 1.808.128M18 9.75l-6 6-6-6" />
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Linguistics & Communication</h3>
@@ -92,20 +118,25 @@
                             <!-- Heroicon: calendar-days -->
                             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-                        </G>
-                        </svg>
+                            </G>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Dashboard & Scheduling</h3>
+                        <p class="text-gray-600 mb-6">Use this site as a hub. Schedule a meeting, visit the shop, or make a payment.</p>
+                        <a href="./contact.html" class="font-semibold text-indigo-600 hover:text-indigo-500 transition-colors">Get in Touch &rarr;</a>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Dashboard & Scheduling</h3>
-                    <p class="text-gray-600 mb-6">Use this site as a hub. Schedule a meeting, visit the shop, or make a payment.</p>
-                    <a href="./contact.html" class="font-semibold text-indigo-600 hover:text-indigo-500 transition-colors">Get in Touch &rarr;</a>
                 </div>
-            </div>
 
+            </div>
         </div>
     </section>
 
-    <div id="footer-placeholder"></div>
-    
-    <script src="app.js"></script>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500">
+            <p>&copy; 2025 Sunny Jamil. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
