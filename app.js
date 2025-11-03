@@ -57,8 +57,8 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     
     // Load navigation and then call the function to highlight the active link.
-    loadComponent(`${basePath}/_nav.html`, "nav-placeholder", highlightActiveNav);
+    loadComponent(`${basePath}_nav.html`, "nav-placeholder", highlightActiveNav);
     
     // Load the footer.
-    loadComponent(`${basePath}/_footer.html`, "footer-placeholder");
+    loadComponent(`${basePath}_footer.html`, "footer-placeholder");
 });
