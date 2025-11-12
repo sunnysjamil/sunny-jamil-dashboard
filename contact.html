@@ -32,7 +32,7 @@
             <div class="flex items-center justify-between h-16">
                 <!-- Site Name -->
                 <div class="flex-shrink-0">
-                    <a href="/" class="text-2xl font-bold text-gray-900">Sunny S. Jamil</a>
+                    <a href="./index.html" class="text-2xl font-bold text-gray-900">Sunny S. Jamil</a>
                 </div>
                 <!-- Desktop Navigation Links -->
                 <nav class="hidden md:flex md:space-x-8">
@@ -62,13 +62,22 @@
                     </a>
                 </nav>
                 <!-- Mobile Menu Button (functionality not yet added) -->
-                <div class="md:hidden">
-                    <button class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
                         <!-- Heroicon: menu -->
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                 </div>
             </div>
+        </div>
+        <!-- Mobile Menu, hidden by default -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="./index.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Home</a>
+            <a href="./resume.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Resume</a>
+            <a href="./wishlist.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Wishlist</a>
+            <a href="./contact.html" class="block py-2 px-4 text-sm text-indigo-600 bg-indigo-50">Scheduling</a>
+            <a href="./payments.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Payments</a>
+            <a href="./shop.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Shop</a>
         </div>
     </header>
 
@@ -102,6 +111,17 @@
             <p>&copy; 2025 Sunny S. Jamil. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
 
 </body>
 </html>
