@@ -3,24 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunny Jamil - Resume</title>
+    <title>Sunny S. Jamil - Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
+            /* For smooth scrolling when clicking ToC links */
+            scroll-behavior: smooth;
             font-family: 'Inter', sans-serif;
         }
         /* Simple styles for resume content */
-        .resume-section h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #111827; /* gray-900 */
-            border-bottom: 2px solid #e5e7eb; /* gray-200 */
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
         .job-entry, .education-entry, .certification-entry {
             margin-bottom: 2rem;
             padding-left: 3.5rem; /* Space for the logo */
@@ -39,11 +33,63 @@
             object-fit: contain;
             border-radius: 0.25rem;
         }
+        .project-entry {
+            margin-bottom: 2rem;
+            padding-left: 3.5rem; /* Space for the thumbnail */
+            position: relative;
+        }
+        .project-links a {
+            margin-right: 1rem;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <div id="nav-placeholder"></div>
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Site Name -->
+                <div class="flex-shrink-0">
+                    <a href="/" class="text-2xl font-bold text-gray-900">Sunny S. Jamil</a>
+                </div>
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="./index.html" class="text-gray-600 hover:text-indigo-600 transition-colors flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5"></path></svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="./resume.html" class="text-indigo-600 font-semibold transition-colors flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"></path></svg>
+                        <span>Resume</span>
+                    </a>
+                    <a href="./wishlist.html" class="text-gray-600 hover:text-indigo-600 transition-colors flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path></svg>
+                        <span>Wishlist</span>
+                    </a>
+                    <a href="./contact.html" class="text-gray-600 hover:text-indigo-600 transition-colors flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"></path></svg>
+                        <span>Scheduling</span>
+                    </a>
+                    <a href="./payments.html" class="text-gray-600 hover:text-indigo-600 transition-colors flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"></path></svg>
+                        <span>Payments</span>
+                    </a>
+                    <a href="./shop.html" class="text-gray-600 hover:text-indigo-600 transition-colors flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.658-.463 1.243-1.117 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.116 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path></svg>
+                        <span>Shop</span>
+                    </a>
+                </nav>
+                <!-- Mobile Menu Button (functionality not yet added) -->
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                        <!-- Heroicon: menu -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Main Content for Resume Page -->
     <main>
@@ -59,17 +105,258 @@
                 </a> -->
             </div>
 
+            <!-- Table of Contents -->
+            <div class="mt-8 mb-16 p-4 bg-gray-100 rounded-lg">
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium text-gray-700">
+                    <a href="#about" class="hover:text-indigo-600 hover:underline">About Me</a>
+                    <a href="#experience" class="hover:text-indigo-600 hover:underline">Experience</a>
+                    <a href="#internships" class="hover:text-indigo-600 hover:underline">Internships</a>
+                    <a href="#projects" class="hover:text-indigo-600 hover:underline">Projects & Certs</a>
+                    <a href="#skills" class="hover:text-indigo-600 hover:underline">Skills</a>
+                    <a href="#education" class="hover:text-indigo-600 hover:underline">Education</a>
+                </div>
+            </div>
+
             <!-- About Me Section -->
-            <div class="resume-section mb-12">
-                <h2>About Me</h2>
+            <div id="about" class="resume-section mb-12">
+                <div class="flex justify-between items-baseline border-b-2 border-gray-200 pb-2 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-900">About Me</h2>
+                    <a href="#" class="text-sm font-medium text-indigo-600 hover:underline">Back to Top &uarr;</a>
+                </div>
                 <p class="text-gray-700 leading-relaxed">
                     With a passion for producing effective business solutions, Sunny specializes in medical technology and server infrastructure. His expertise spans <strong>system engineering</strong> and <strong>system architecture</strong>, allowing him to design, implement, and support robust, scalable software solutions. As a team lead, he has honed strong <strong>managerial skills</strong>, guiding product teams to success in complex healthcare environments. In his free time, he researches emerging tech, tackles logical challenges, and dabbles in linguistics. Since 2008, he has also provided technical consulting services to private clients.
                 </p>
             </div>
 
-            <!-- Skills Section -->
-            <div class="resume-section mb-12">
-                <h2>Skills</h2>
+            <!-- Experience Section -->
+            <div id="experience" class="resume-section mb-12">
+                <div class="flex justify-between items-baseline border-b-2 border-gray-200 pb-2 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-900">Experience</h2>
+                    <a href="#" class="text-sm font-medium text-indigo-600 hover:underline">Back to Top &uarr;</a>
+                </div>
+                <div class="job-entry">
+                    <img src="./images/resume/montefiore.png" alt="Montefiore Health System Logo" class="logo bg-white p-1">
+                    <p class="job-title">Team Lead</p>
+                    <p class="text-gray-700">Montefiore Health System | Remote</p>
+                    <p class="text-sm text-gray-500 mb-3">November 2022 - Present</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Lead a product team overseeing healthcare software for revenue cycle operations.</li>
+                        <li>Manage solutions that support clinical documentation, coding improvement, and interface with the Epic EMR.</li>
+                        <li>Oversee a software suite including 3M 360 Encompass, PwC SMART, SmarterDx, and eCHARMS.</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                     <img src="./images/resume/montefiore.png" alt="Montefiore Health System Logo" class="logo bg-white p-1">
+                    <p class="job-title">IT Systems Administrator</p>
+                    <p class="text-gray-700">Montefiore Health System | Greater New York City Area</p>
+                    <p class="text-sm text-gray-500 mb-3">September 2018 - November 2022 · 4 yrs 3 mos</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Engineered, implemented, and supported software solutions for Opioid Treatment Programs (OTP).</li>
+                        <li>Managed key systems including the SMART EMR, Epic primary care EMR, and imaDesktop revenue cycle system.</li>
+                        <li>Maintained system interfaces and performed server maintenance on Windows and Red Hat Enterprise Linux.</li>
+                        <li>Supported Epic scanning and Health Information Management (HIM) coding software.</li>
+                    </ul>
+                </div>
+                 <div class="job-entry">
+                    <img src="./images/resume/cohere.png" alt="Cohere Communications Logo" class="logo bg-white p-1">
+                    <p class="job-title">Network Operations Center Engineer</p>
+                    <p class="text-gray-700">Cohere Communications | Tarrytown, NY</p>
+                    <p class="text-sm text-gray-500 mb-3">October 2017 - September 2018 · 1 yr</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Provided data center maintenance as a NOC Engineer for a Managed IT Service Provider (MSP).</li>
+                        <li>Managed Windows Servers, Hyper-V, and VMware virtualization environments.</li>
+                        <li>Administered Voice over IP (VoIP) systems and supported Windows and macOS workstations.</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                    <img src="./images/resume/ntent.png" alt="NTENT Logo" class="logo bg-white p-1">
+                    <p class="job-title">IT Support Technician</p>
+                    <p class="text-gray-700">NTENT | New York</p>
+                    <p class="text-sm text-gray-500 mb-3">June 2015 - October 2017 · 2 yrs 5 mos</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Resolved complex IT issues and delivered productivity solutions for a linguistic research firm.</li>
+                        <li>Provided IT support for corporate offices in New York and Virginia, and for a global remote workforce.</li>
+                        <li>Designed and administered Office 365, VoIP systems, and a custom asset tracking system.</li>
+                        <li>Managed Windows and macOS workstations and conducted new hire IT orientations.</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                    <div class="logo bg-gray-200 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6M3 9v11.25a1.5 1.5 0 001.5 1.5h15a1.5 1.5 0 001.5-1.5V9M3 9h18"></path></svg>
+                    </div>
+                    <p class="job-title">Web Developer</p>
+                    <p class="text-gray-700">City of White Plains, New York | White Plains, NY</p>
+                    <p class="text-sm text-gray-500 mb-3">November 2008 - November 2012 · 4 yrs 1 mo (Part-time)</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Advised on and administered technology for the Youth Employment department.</li>
+                        <li>Administered a website for local youth activities and employment opportunities.</li>
+                        <li>Developed and managed a database for ~200 annual summer employment applications.</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                    <div class="logo bg-gray-200 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <p class="job-title">Junior Counselor</p>
+                    <p class="text-gray-700">Police Athletic League, Inc. | Greater New York City Area</p>
+                    <p class="text-sm text-gray-500 mb-3">2006 · Less than a year (Seasonal)</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>I was a role model for pre-teen children at summer camp.</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                    <div class="logo bg-gray-200 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 17.25v-.228a4.5 4.5 0 00-.12-1.03l-2.268-9.64a3.375 3.375 0 00-3.285-2.85H7.928a3.375 3.375 0 00-3.285 2.85l-2.268 9.64a4.5 4.5 0 00-.12 1.03v.228m19.5 0a3 3 0 01-3 3H5.25a3 3 0 01-3-3m19.5 0a3 3 0 00-3-3H5.25a3 3 0 00-3 3m16.5 0h.008v.008h-.008v-.008z"></path></svg>
+                    </div>
+                    <p class="job-title">IT Consultant</p>
+                    <p class="text-gray-700">Self-Employed | Greater New York City Area</p>
+                    <p class="text-sm text-gray-500 mb-3">2008 - Present</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Provide comprehensive technical consulting services to private clients, including hardware/software support, network setup, and system maintenance.</li>
+                    </ul>
+                </div>
+                <!-- Toggle Button -->
+                <div class="mt-6 text-center">
+                    <button id="toggle-experience-btn" class="font-semibold text-indigo-600 hover:text-indigo-500 transition-colors">Show More &darr;</button>
+                </div>
+            </div>
+
+            <!-- Internships Section -->
+            <div id="internships" class="resume-section mb-12">
+                <div class="flex justify-between items-baseline border-b-2 border-gray-200 pb-2 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-900">Internships</h2>
+                    <a href="#" class="text-sm font-medium text-indigo-600 hover:underline">Back to Top &uarr;</a>
+                </div>
+                <div class="job-entry">
+                    <div class="logo bg-gray-200 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18.375V12m0-6.75V3.375M3 12h18M9.06 6.94l.012.002M14.94 6.94l-.012.002M9.06 17.06l.012-.002M14.94 17.06l-.012-.002"></path></svg>
+                    </div>
+                    <p class="job-title">Junior Network Administrator</p>
+                    <p class="text-gray-700">Acorda Therapeutics, Inc. | Ardsley, NY</p>
+                    <p class="text-sm text-gray-500 mb-3">June 2014 - August 2014 · 3 mos (Internship)</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Supported a five-member Network Operations team at a leading pharmaceutics firm.</li>
+                        <li>Proactively identified and completed technical tasks, earning commendation from IT leadership.</li>
+                        <li>Contributed value through technical skills in a professional, team-oriented environment.</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                    <img src="./images/resume/pace.png" alt="Pace University Logo" class="logo bg-white p-1">
+                    <p class="job-title">Information Technology Technician</p>
+                    <p class="text-gray-700">Pace University | Pleasantville, NY</p>
+                    <p class="text-sm text-gray-500 mb-3">September 2013 - May 2014 · 9 mos (Internship)</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Provided desktop support and resolved technology issues for university students and staff.</li>
+                        <li>Managed Active Directory user accounts, workstation backups, and system image deployments.</li>
+                        <li>Troubleshot advanced university systems including Blackboard, Kronos, and student portals.</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                    <div class="logo bg-gray-200 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.905 59.905 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5z"></path></svg>
+                    </div>
+                    <p class="job-title">Information Technology Tutor</p>
+                    <p class="text-gray-700">Westchester Community College | Valhalla, NY</p>
+                    <p class="text-sm text-gray-500 mb-3">September 2012 - July 2013 · 11 mos (Internship)</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Tutored students in Computer Information Systems (CIS) coursework to ensure concept mastery.</li>
+                        <li>Provided support for topics including Microsoft Office, operating systems, network security, Visual Basic, and SQL database design.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Certifications & Projects Section -->
+            <div id="projects" class="resume-section mb-12">
+                
+                <div class="flex justify-between items-baseline border-b-2 border-gray-200 pb-2 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-900">Certifications & Projects</h2>
+                    <a href="#" class="text-sm font-medium text-indigo-600 hover:underline">Back to Top &uarr;</a>
+                </div>
+                
+                <!-- Certifications Sub-section -->
+                <div class="certification-entry">
+                    <img src="./images/resume/epic.png" alt="Epic Systems Logo" class="logo bg-white p-1">
+                    <p class="job-title">Health Information Management - Hospital Coding</p>
+                    <p class="text-gray-700">Epic Systems</p>
+                </div>
+
+                <!-- Projects Sub-section -->
+                <h3 class="text-xl font-semibold text-gray-800 mt-12 mb-6 border-t pt-6 border-gray-200">
+                    <a href="./projects.html" class="hover:underline">Projects</a>
+                </h3>
+
+                <!-- Project 1: Personal Portfolio -->
+                <div class="project-entry">
+                    <div class="logo bg-green-600 flex items-center justify-center p-1">
+                        <svg class="w-full h-full text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 8L3 4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 8H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 5.5H6.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 5.5H9.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p class="job-title">Personal Portfolio Website</p>
+                    <p class="text-gray-700 mb-2">A multi-page personal website built with HTML and Tailwind CSS, serving as a professional hub with a resume, project gallery, and scheduling tools.</p>
+                    <div class="project-links text-sm">
+                        <a href="https://sunny.salmanjamil.me" target="_blank" class="font-semibold text-indigo-600 hover:underline">View Live</a>
+                        <a href="https://github.com/sunnysjamil/sunny-jamil-dashboard" target="_blank" class="font-semibold text-gray-600 hover:underline">View Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Connect 4 -->
+                <div class="project-entry">
+                    <div class="logo bg-blue-600 flex items-center justify-center p-1">
+                        <svg class="w-full h-full text-white" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="0.5" cy="0.5" r="0.4" fill="#f59e0b"/> <circle cx="1.5" cy="0.5" r="0.4" fill="#e5e7eb"/> <circle cx="2.5" cy="0.5" r="0.4" fill="#e5e7eb"/>
+                            <circle cx="0.5" cy="1.5" r="0.4" fill="#ef4444"/> <circle cx="1.5" cy="1.5" r="0.4" fill="#f59e0b"/> <circle cx="2.5" cy="1.5" r="0.4" fill="#e5e7eb"/>
+                            <circle cx="0.5" cy="2.5" r="0.4" fill="#ef4444"/> <circle cx="1.5" cy="2.5" r="0.4" fill="#f59e0b"/> <circle cx="2.5" cy="2.5" r="0.4" fill="#ef4444"/>
+                        </svg>
+                    </div>
+                    <p class="job-title">Connect 4 Game</p>
+                    <p class="text-gray-700 mb-2">A classic two-player connection game built with vanilla JavaScript and styled with Tailwind CSS, featuring win/draw detection.</p>
+                    <div class="project-links text-sm">
+                        <a href="./projects/connect-4.html" class="font-semibold text-indigo-600 hover:underline">Play Game</a>
+                        <a href="https://github.com/sunnysjamil/sunny-jamil-dashboard/blob/main/projects/connect-4.html" target="_blank" class="font-semibold text-gray-600 hover:underline">View Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Tic-Tac-Toe -->
+                <div class="project-entry">
+                    <div class="logo bg-red-500 flex items-center justify-center p-1">
+                        <svg class="w-full h-full text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 19H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <p class="job-title">Classic Tic-Tac-Toe Game</p>
+                    <p class="text-gray-700 mb-2">An interactive Tic-Tac-Toe game built with vanilla JavaScript and styled with Tailwind CSS, featuring turn tracking and win/draw detection.</p>
+                    <div class="project-links text-sm">
+                        <a href="./projects/tic-tac-toe.html" class="font-semibold text-indigo-600 hover:underline">Play Game</a>
+                        <a href="https://github.com/sunnysjamil/tic-tac-toe-game" target="_blank" class="font-semibold text-gray-600 hover:underline">View Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 4: WPYB Website -->
+                <div class="project-entry">
+                    <div class="logo bg-orange-500 flex items-center justify-center p-1">
+                        <svg class="w-full h-full text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.6 9H20.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.6 15H20.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 3C14.4853 3 16.5 7.02944 16.5 12C16.5 16.9706 14.4853 21 12 21C9.51472 21 7.5 16.9706 7.5 12C7.5 7.02944 9.51472 3 12 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p class="job-title">White Plains Youth Bureau Website</p>                    <p class="text-gray-700 mb-2">Contributed to the development and maintenance of the official website for the White Plains Youth Bureau, a community organization, between 2007 and 2012.</p>
+                    <div class="project-links text-sm">
+                        <a href="https://whiteplainsyouthbureau.org/" target="_blank" class="font-semibold text-indigo-600 hover:underline">View Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section (Moved) -->
+            <div id="skills" class="resume-section mb-12">
+                <div class="flex justify-between items-baseline border-b-2 border-gray-200 pb-2 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-900">Skills</h2>
+                    <a href="#" class="text-sm font-medium text-indigo-600 hover:underline">Back to Top &uarr;</a>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                         <h3 class="text-lg font-semibold text-gray-800 mb-3">Technical</h3>
@@ -96,78 +383,25 @@
                 </div>
             </div>
 
-            <!-- Certifications Section -->
-            <div class="resume-section mb-12">
-                <h2>Certifications</h2>
-                <div class="certification-entry">
-                    <img src="https://logo.clearbit.com/epic.com" alt="Epic Systems Logo" class="logo bg-white p-1">
-                    <p class="job-title">Health Information Management - Hospital Coding</p>
-                    <p class="text-gray-700">Epic Systems</p>
-                </div>
-            </div>
-
-            <!-- Experience Section -->
-            <div class="resume-section mb-12">
-                <h2>Experience</h2>
-                <div class="job-entry">
-                    <img src="https://logo.clearbit.com/montefiore.org" alt="Montefiore Health System Logo" class="logo bg-white p-1">
-                    <p class="job-title">Team Lead</p>
-                    <p class="text-gray-700">Montefiore Health System | White Plains, New York</p>
-                    <p class="text-sm text-gray-500 mb-3">November 2022 - Present</p>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Lead a product team overseeing various healthcare software for revenue cycle operations, interfacing with the Epic EMR.</li>
-                        <li>Manage a suite of software including 3M 360 Encompass, 3M Core Grouping Software, PwC SMART, SmarterDx, and eCHARMS.</li>
-                    </ul>
-                </div>
-                <div class="job-entry">
-                     <img src="https://logo.clearbit.com/montefiore.org" alt="Montefiore Health System Logo" class="logo bg-white p-1">
-                    <p class="job-title">IT Systems Administrator</p>
-                    <p class="text-gray-700">Montefiore Health System | Greater New York City Area</p>
-                    <p class="text-sm text-gray-500 mb-3">September 2018 - November 2022</p>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Engineered, implemented, and supported software solutions for opioid treatment programs (OTP).</li>
-                        <li>Focused on OTP EMR (SMART), primary care EMR (Epic), and revenue cycle systems.</li>
-                        <li>Managed interfaces between systems and performed Windows and Red Hat Enterprise Linux server maintenance.</li>
-                    </ul>
-                </div>
-                 <div class="job-entry">
-                    <img src="https://logo.clearbit.com/coherecomm.com" alt="Cohere Communications Logo" class="logo bg-white p-1">
-                    <p class="job-title">Network Operations Center Engineer</p>
-                    <p class="text-gray-700">Cohere Communications | Tarrytown, NY</p>
-                    <p class="text-sm text-gray-500 mb-3">October 2017 - September 2018</p>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Provided data center maintenance at a Managed IT service provider.</li>
-                        <li>Managed Windows Servers, Hyper-V and VMware virtualization, Voice Over IP, and Windows/macOS workstations.</li>
-                    </ul>
-                </div>
-                <div class="job-entry">
-                    <img src="https://logo.clearbit.com/ntent.com" alt="NTENT Logo" class="logo bg-white p-1">
-                    <p class="job-title">IT Support Technician</p>
-                    <p class="text-gray-700">NTENT | New York</p>
-                    <p class="text-sm text-gray-500 mb-3">June 2015 - October 2017</p>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Resolved challenging IT issues and delivered productivity solutions for a linguistic research firm.</li>
-                        <li>Administered Office 365, VoIP technologies, custom asset tracking systems, and workstations for global employees.</li>
-                    </ul>
-                </div>
-            </div>
-
             <!-- Education Section -->
-            <div class="resume-section">
-                <h2>Education</h2>
+            <div id="education" class="resume-section">
+                <div class="flex justify-between items-baseline border-b-2 border-gray-200 pb-2 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-900">Education</h2>
+                    <a href="#" class="text-sm font-medium text-indigo-600 hover:underline">Back to Top &uarr;</a>
+                </div>
                 <div class="education-entry">
-                    <img src="https://logo.clearbit.com/pace.edu" alt="Pace University Logo" class="logo bg-white p-1">
+                    <img src="./images/resume/pace.png" alt="Pace University Logo" class="logo bg-white p-1">
                     <p class="job-title">Master of Business Administration (MBA), Management Information Systems</p>
                     <p class="text-gray-700">Pace University - Lubin School of Business</p>
                     <p class="text-sm text-gray-500">2021</p>
                 </div>
                 <div class="education-entry">
-                    <img src="https://logo.clearbit.com/pace.edu" alt="Pace University Logo" class="logo bg-white p-1">
+                    <img src="./images/resume/pace.png" alt="Pace University Logo" class="logo bg-white p-1">
                     <p class="job-title">Bachelor of Business Administration (BBA), Information Systems</p>
                     <p class="text-gray-700">Pace University - Lubin School of Business</p>
                 </div>
                 <div class="education-entry">
-                    <img src="https://resources.finalsite.net/images/v1657763885/whiteplainspublicschoolsorg/f1ed8iqdurkgvrvoyugc/logo.svg" alt="White Plains Public Schools Logo" class="logo bg-white p-1">
+                    <img src="./images/resume/wpcsd.jpg" alt="White Plains Public Schools Logo" class="logo bg-white p-1">
                     <p class="job-title">Advanced Regents Diploma</p>
                     <p class="text-gray-700">White Plains Senior High School</p>
                 </div>
@@ -176,9 +410,46 @@
         </div>
     </main>
 
-    <div id="footer-placeholder"></div>
-    
-    <script src="app.js"></script>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500">
+            <p>&copy; 2025 Sunny S. Jamil. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const experienceSection = document.getElementById('experience');
+            const jobEntries = experienceSection.querySelectorAll('.job-entry');
+            const toggleBtn = document.getElementById('toggle-experience-btn');
+            const visibleJobs = 3;
+
+            if (jobEntries.length > visibleJobs) {
+                // Initially hide jobs beyond the visible limit
+                for (let i = visibleJobs; i < jobEntries.length; i++) {
+                    jobEntries[i].classList.add('hidden');
+                }
+
+                toggleBtn.addEventListener('click', () => {
+                    const isCollapsed = jobEntries[visibleJobs].classList.contains('hidden');
+
+                    for (let i = visibleJobs; i < jobEntries.length; i++) {
+                        jobEntries[i].classList.toggle('hidden');
+                    }
+
+                    if (isCollapsed) {
+                        toggleBtn.innerHTML = 'Show Less &uarr;';
+                    } else {
+                        toggleBtn.innerHTML = 'Show More &darr;';
+                    }
+                });
+
+            } else {
+                // If there are 3 or fewer jobs, hide the button
+                toggleBtn.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 </html>
